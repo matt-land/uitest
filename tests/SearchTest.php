@@ -5,7 +5,7 @@
  * Date: 5/13/15
  * Time: 11:49 PM
  */
-use PHPUnit_Extensions_Selenium2TestCase_Keys as Keys;
+use \PHPUnit_Extensions_Selenium2TestCase_Keys as Keys;
 class SearchTest extends MyAbstract
 {
     protected function waitForText($string)
