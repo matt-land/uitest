@@ -30,7 +30,7 @@ class SignupTest extends MyAbstract
         self::byId('signup_forms_submit')->click();
 
         self::waitForText('I am not a robot');
-        
+
 
     }
 }
