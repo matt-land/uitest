@@ -8,24 +8,6 @@
 use \PHPUnit_Extensions_Selenium2TestCase_Keys as Keys;
 class SearchTest extends MyAbstract
 {
-    protected function waitForText($string)
-    {
-        $maxTime = time() + 15;
-        while (stripos(self::source(), '<body') === false) {
-            usleep(333333);
-            if (time() > $maxTime) {
-                throw new \Exception('Timeout waiting for page to load');
-            }
-        };
-        while (stripos(self::byTag('body')->text(), $string) === false) {
-            usleep(333333);
-            if (time() > $maxTime) {
-                throw new \Exception('Timeout waiting for string ' . $string);
-            }
-        }
-        return true;
-    }
-
     public function testSearch()
     {
         self::url('/');
