@@ -11,19 +11,19 @@ class IframeExampleTest extends MyAbstract
     public function testTraverseIframe()
     {
         //switch to the iframe
-        $this->frame($this->byId('docusign-iframe'));
-        $this->waitForText('Please review the documents below.');
+        self::frame($this->byId('docusign-iframe'));
+        self::waitForText('Please review the documents below.');
 
         //switch to child iframe
-        $this->frame($this->byId('nav-buttons'));
+        self::frame($this->byId('nav-buttons'));
         // Do STUFF HERE
 
         //go back to the parent
-        $this->frame(null);
+        self::frame(null);
         //back into the outer iframe
-        $this->frame($this->byId('docusign-iframe'));
+        self::frame($this->byId('docusign-iframe'));
 
         //go back to the parent
-        $this->frame(null);
+        self::frame(null);
     }
 }
